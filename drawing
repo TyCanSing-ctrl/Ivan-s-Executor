@@ -649,23 +649,26 @@ end
 
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
-
 local player = Players.LocalPlayer
+
 local userId = player.UserId
-local thumbnail, isReady = Players:GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+local thumbnailType = Enum.ThumbnailType.HeadShot
+local thumbnailSize = Enum.ThumbnailSize.Size420x420
 
-if isReady then
-    StarterGui:SetCore("SendNotification", {
-        Title = "[Ivan's Executor]",
-        Text = "Ivan's Executor Has Injected!",
-        Icon = thumbnail,
-        Duration = 5
-    })
+task.spawn(function()
+    local avatarImageUrl, isReady = Players:GetUserThumbnailAsync(userId, thumbnailType, thumbnailSize)
 
-    task.spawn(function()
-        print("Ivan's Executor Has Been Injected!")
-    end)
-end
+    if isReady then
+        StarterGui:SetCore("SendNotification", {
+            Title = "[Ivan's Executor]",
+            Text = "Ivan's Executor Injected Successfully! " .. player.Name .. "!",
+            Icon = avatarImageUrl,
+            Duration = 5 -- Optional: Adjust the duration as needed
+        })
+    else
+        print("Failed to retrieve avatar thumbnail.")
+    end
+end)
 
 function DrawingLib.createScreenGui()
 	local screenGuiObj = ({
