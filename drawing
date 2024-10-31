@@ -647,8 +647,25 @@ function DrawingLib.createFrame()
 	})
 end
 
-task.spawn(function()
-	print("Ivan's Executor Has Been Injected!")
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+Players.PlayerAdded:Connect(function(player)
+    local userId = player.UserId
+    local thumbnail, isReady = Players:GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+    
+    if isReady then
+        StarterGui:SetCore("SendNotification", {
+            Title = "[Ivan's Executor]",
+            Text = "Ivan's Executor Injected Into Game! If You Leave You Might Crash!",
+            Icon = thumbnail, -- Sets the player's avatar as the icon
+            Duration = 5 -- Adjust the duration as needed
+        })
+
+        task.spawn(function()
+            print("Ivan's Executor Has Been Injected!")
+        end)
+    end
 end)
 
 function DrawingLib.createScreenGui()
