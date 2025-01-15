@@ -2455,8 +2455,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			return ParagraphValue
 		end
     local allowedNames = {
-        ["01xMYS"] = true,
-	["leeleru"] = true,
+        ["izzkhalifahpro"] = true,
+	["izzkhalifahpro"] = true,
     }
     
     if getgenv().css_digital then
