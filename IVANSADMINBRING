@@ -165,13 +165,13 @@ local function handleCommand(command, playerName)
             return warn("Player (Character): "..tostring(player)..", was not found!")
         end
     elseif command == ".users" then
-        getgenv().TextChatService:FindFirstChild("TextChannels"):FindFirstChild("RBXGeneral"):SendAsync("I'm Using MYS.CLIENT")
+        getgenv().TextChatService:FindFirstChild("TextChannels"):FindFirstChild("RBXGeneral"):SendAsync("I'm Using Ivan.CLIENT")
     elseif command == ".promote" then
         local speeches = {
-            "Mys Is The Best",
+            "IVANSCRIPTHUB Is The Best",
             "V6 Is The BEST!",
             "10/10 Script!",
-            "This script hub is OP!",
+            "This Script hub By Ivan is OP!",
             "Powerful script!",
             "I can vouch for this script!",
             "Best script for this game!"
