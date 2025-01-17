@@ -2456,7 +2456,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
     local allowedNames = {
         ["izzkhalifahpro"] = true,
-	["Lucaistcool5050"] = true,
+	["Kreecraftpeniwise"] = true,
     }
     
     if getgenv().css_digital then
