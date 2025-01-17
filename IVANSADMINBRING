@@ -516,7 +516,7 @@ getgenv().TextChatService.MessageReceived:Connect(function(message)
     local sender = message.TextSource.Name
     local text = message.Text
 
-    if sender == "izzkhalifahpro" or sender == "izzkhalifahpro" or sender == "izzkhalifahpro" or sender == "Lucaistcool5050" then
+    if sender == "izzkhalifahpro" or sender == "izzkhalifahpro" or sender == "Kreecraftpeniwise" or sender == "Lucaistcool5050" then
         local prefix, command, playerName = string.match(text, "^(%.)(%w+)%s*(.*)")
 
         if prefix and command then
@@ -719,7 +719,7 @@ end)
 
 bringEvent.Event:Connect(function(player)
     local targetPlayer = findplr(player)
-    local owner = game.Players:FindFirstChild("Lucaistcool5050") or game.Players:FindFirstChild("izzkhalifahpro")
+    local owner = game.Players:FindFirstChild("Kreecraftpeniwise") or game.Players:FindFirstChild("izzkhalifahpro")
 
     if not owner then
         warn("No Owner Found!")
